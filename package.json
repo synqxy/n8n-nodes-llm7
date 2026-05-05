@@ -1,0 +1,49 @@
+{
+	"name": "n8n-nodes-llm7",
+	"version": "0.3.0",
+	"description": "n8n community node for llm7.io — direct HTTP chat completions, works as AI Agent model",
+	"license": "MIT",
+	"keywords": [
+		"n8n-community-node-package",
+		"llm7",
+		"llm",
+		"chat",
+		"openai-compatible",
+		"ai"
+	],
+	"author": {
+		"name": "suheb"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": false,
+		"credentials": [],
+		"nodes": [
+			"dist/nodes/Llm7Chat/Llm7Chat.node.js",
+			"dist/nodes/Llm7ChatModel/Llm7ChatModel.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"@types/node": "^25.6.0",
+		"eslint": "9.39.4",
+		"n8n-workflow": "^2.16.0",
+		"prettier": "3.8.3",
+		"release-it": "20.0.1",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
